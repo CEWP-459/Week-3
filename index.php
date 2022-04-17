@@ -12,7 +12,7 @@
 
     <h1>Lorem Ipsum</h1>
 
-    <p>Hello, <?php echo $name; ?>!</p>
+    <p>Hello, <?= $name; ?>!</p>
 
 </body>
 </html>
