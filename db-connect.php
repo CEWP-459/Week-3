@@ -11,4 +11,13 @@ if (mysqli_connect_error()) {
     exit;
 }
 
-echo "Connected to the DB!";
+// echo "Connected to the DB!";
+
+$sql = "SELECT * FROM article";
+$result = mysqli_query($connection, $sql);
+
+if ($result) {
+    var_dump($result);
+} else {
+    echo "ERROR: " . mysqli_error($connection);
+}
