@@ -1,3 +1,7 @@
+<?php
+     $day = "Tuesday";
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,34 +11,30 @@
 <body>
 
     <h1>Lorem Ipsum</h1>
-    <?php
-        $day = "Tuesday";
-        switch ($day) {
-            case "Monday": 
-                echo "Monday";
-                break;
-            case "Tuesday":
-                echo "Tuesday";
-                break;
-            case "Wednesday":
-                echo "Wednesday";
-                break;
-            case "Thursday":
-                echo "Thursday";
-                break;
-            case "Friday":
-                echo "Friday";
-                break;
-            case "Saturday":
-                echo "Saturday";
-                break;
-            case "Sunday":
-                echo "Sunday";
-                break;
-            default: 
-                echo "Day Info Not Available!";  
-        }        
-    ?>
+    <?php switch ($day) : 
+            case "Monday": ?>
+                Monday
+            <?php  break; 
+            case "Tuesday": ?>
+                <em>Tuesday</em>
+            <?php  break;
+            case "Wednesday": ?>
+                Wednesday
+            <?php  break;
+            case "Thursday": ?>
+                Thursday
+            <?php break;
+            case "Friday": ?>
+                Friday
+            <?php break;
+            case "Saturday": ?>
+                Saturday
+            <?php break;
+            case "Sunday": ?>
+                Sunday
+            <?php default: ?>
+                Day Info Not Available!      
+    <?php endswitch; ?>
 
 </body>
 </html>
