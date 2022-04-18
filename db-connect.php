@@ -14,10 +14,13 @@ if (mysqli_connect_error()) {
 // echo "Connected to the DB!";
 
 $sql = "SELECT * FROM article";
-$result = mysqli_query($connection, $sql);
-
-if ($result) {
-    var_dump(mysqli_fetch_all($result, MYSQLI_ASSOC));
-} else {
-    echo "ERROR: " . mysqli_error($connection);
+try {
+    $result = mysqli_query($connection, $sql);
+    if ($result) {
+        var_dump(mysqli_fetch_all($result, MYSQLI_ASSOC));
+    } else {
+        echo "DB did not return a value: " . mysqli_error($connection);
+    }
+} catch (Exception $e) {
+    echo "ERROR: " . $e;
 }
