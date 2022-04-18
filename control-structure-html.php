@@ -1,79 +1,76 @@
+<!-- switch  -->
 <?php
      $day = "Tuesday";
 ?>
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My website</title>
     <meta charset="utf-8">
 </head>
+
 <body>
 
     <h1>Lorem Ipsum</h1>
     <?php switch ($day) : 
             case "Monday": ?>
-                Monday
-            <?php  break; 
+    Monday
+    <?php  break; 
             case "Tuesday": ?>
-                <em>Tuesday</em>
-            <?php  break;
+    <em>Tuesday</em>
+    <?php  break;
             case "Wednesday": ?>
-                Wednesday
-            <?php  break;
+    Wednesday
+    <?php  break;
             case "Thursday": ?>
-                Thursday
-            <?php break;
+    Thursday
+    <?php break;
             case "Friday": ?>
-                Friday
-            <?php break;
+    Friday
+    <?php break;
             case "Saturday": ?>
-                Saturday
-            <?php break;
+    Saturday
+    <?php break;
             case "Sunday": ?>
-                Sunday
-            <?php default: ?>
-                Day Info Not Available!      
+    Sunday
+    <?php default: ?>
+    Day Info Not Available!
     <?php endswitch; ?>
 
 </body>
+
 </html>
 
 
-
-
-
-
-
-
-
-
-
-
-<!-- <?php
-
+<!-- if statement -->
+<?php
 $hour = 12;
-
 ?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My website</title>
     <meta charset="utf-8">
 </head>
+
 <body>
 
     <h1>Lorem Ipsum</h1>
 
     <?php if ($hour < 12): ?>
-        Good morning
+    Good morning
     <?php elseif ($hour < 18): ?>
-        Good afternoon
+    Good afternoon
     <?php elseif ($hour < 22): ?>
-        Good evening
+    Good evening
     <?php else: ?>
-        Good night
+    Good night
     <?php endif; ?>
 
 </body>
-</html> -->
+
+</html>
