@@ -11,7 +11,7 @@
         exit;
     }
     
-    $sql = "SELECT * FROM article";
+    $sql = "SELECT * FROM article where id = 87";
     try {
         $result = mysqli_query($connection, $sql);
         if ($result) {
@@ -38,16 +38,20 @@
 
 <body>
     <h1>Blog</h1>
-    <ol>
-        <?php foreach($articles as $article): ?>
-        <li>
-            <h3>Title:</h3>
-            <?= $article['title'] ?>
-            <h3>Content:</h3>
-            <?= $article['content'] ?>
-        </li>
-        <?php endforeach; ?>
-    </ol>
+    <?php if (empty($articles)) : ?>
+        <h2> No articles found! </h2>
+    <?php else: ?>    
+        <ol>
+            <?php foreach($articles as $article): ?>
+            <li>
+                <h3>Title:</h3>
+                <?= $article['title'] ?>
+                <h3>Content:</h3>
+                <?= $article['content'] ?>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+    <?php endif; ?>    
 </body>
 
 </html>
