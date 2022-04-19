@@ -1,7 +1,7 @@
 <?php
 
     ini_set('display_errors', 1); 
-    require 'database-connection.php'; 
+    require 'includes/database-connection.php'; 
 
     $sql = "SELECT * FROM article"; 
     try {
@@ -17,7 +17,7 @@
 
 ?>
 
-<?php require 'header.php'; ?>
+<?php require 'includes/header.php'; ?>
 <body>
     <h1>Blog</h1>
     <?php if (empty($articles)) : ?>

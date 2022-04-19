@@ -1,7 +1,7 @@
 <?php
 
     ini_set('display_errors', 1); 
-    require 'database-connection.php'; 
+    require 'includes/database-connection.php'; 
     
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $sql = "SELECT * FROM article WHERE id = {$_GET['id']}";
@@ -22,7 +22,7 @@
     
 ?>
 
-<?php require 'header.php'; ?>
+<?php require 'includes/header.php'; ?>
 <body>
     <h1>Blog</h1>
     <?php if ($article === null) : ?>
