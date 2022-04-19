@@ -11,7 +11,7 @@
         exit;
     }
     
-    $sql = "SELECT * FROM article where id = 87";
+    $sql = "SELECT * FROM article";
     try {
         $result = mysqli_query($connection, $sql);
         if ($result) {
@@ -45,7 +45,7 @@
             <?php foreach($articles as $article): ?>
             <li>
                 <h3>Title:</h3>
-                <?= $article['title'] ?>
+                <a href="single-article.php?id=<?=$article['id']?>"><?= $article['title'] ?></a>
                 <h3>Content:</h3>
                 <?= $article['content'] ?>
             </li>

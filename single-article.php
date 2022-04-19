@@ -11,7 +11,7 @@
         exit;
     }
     
-    $sql = "SELECT * FROM article where id = 90";
+    $sql = "SELECT * FROM article where id = {$_GET['id']}";
     try {
         $result = mysqli_query($connection, $sql);
         if ($result) {
