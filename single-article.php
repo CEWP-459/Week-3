@@ -1,15 +1,7 @@
 <?php
-    $db_host = "localhost";
-    $db_name = "blog";
-    $db_username = "blog_www";
-    $db_password = "LZR]PHvInWKW!]6*";
-    
-    $connection = mysqli_connect($db_host, $db_username, $db_password, $db_name);
-    
-    if (mysqli_connect_error()) {
-        echo mysqli_connect_error();
-        exit;
-    }
+
+    ini_set('display_errors', 1); 
+    require 'database-connection.php'; 
     
     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
         $sql = "SELECT * FROM article WHERE id = {$_GET['id']}";
@@ -27,6 +19,7 @@
     } else {
         $article = null;
     }
+    
 ?>
 
 <!DOCTYPE html>
